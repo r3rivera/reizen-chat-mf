@@ -9,7 +9,8 @@ export default defineConfig({
     federation({
       name: "pokemonList",
       filename: "remoteEntry.js",
-      exposes: {
+      exposes:{
+        "./Mount":'./src/mounts/mountApp.tsx',
         "./PokemonList": "./src/components/PokemonList",
         "./Pokemon": "./src/atoms/Pokemon.tsx",
       },
